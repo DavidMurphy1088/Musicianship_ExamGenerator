@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7B5F8CD72A995A8800D004D3 /* Musicianship_ExamGeneratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5F8CD62A995A8800D004D3 /* Musicianship_ExamGeneratorApp.swift */; };
+		7B5F8CD92A995A8800D004D3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5F8CD82A995A8800D004D3 /* ContentView.swift */; };
+		7B5F8CDB2A995A8A00D004D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B5F8CDA2A995A8A00D004D3 /* Assets.xcassets */; };
+		7B5F8CDE2A995A8A00D004D3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B5F8CDD2A995A8A00D004D3 /* Preview Assets.xcassets */; };
+		7B5F8CE02A995A8A00D004D3 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5F8CDF2A995A8A00D004D3 /* Persistence.swift */; };
+		7B5F8CE32A995A8A00D004D3 /* Musicianship_ExamGenerator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B5F8CE12A995A8A00D004D3 /* Musicianship_ExamGenerator.xcdatamodeld */; };
+		7B5F8CEE2A995A8A00D004D3 /* Musicianship_ExamGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5F8CED2A995A8A00D004D3 /* Musicianship_ExamGeneratorTests.swift */; };
+		7B5F8CF82A995A8A00D004D3 /* Musicianship_ExamGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5F8CF72A995A8A00D004D3 /* Musicianship_ExamGeneratorUITests.swift */; };
+		7B5F8CFA2A995A8B00D004D3 /* Musicianship_ExamGeneratorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5F8CF92A995A8B00D004D3 /* Musicianship_ExamGeneratorUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7B5F8CEA2A995A8A00D004D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B5F8CCB2A995A8800D004D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B5F8CD22A995A8800D004D3;
+			remoteInfo = Musicianship_ExamGenerator;
+		};
+		7B5F8CF42A995A8A00D004D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B5F8CCB2A995A8800D004D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B5F8CD22A995A8800D004D3;
+			remoteInfo = Musicianship_ExamGenerator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7B5F8CD32A995A8800D004D3 /* Musicianship_ExamGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Musicianship_ExamGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B5F8CD62A995A8800D004D3 /* Musicianship_ExamGeneratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Musicianship_ExamGeneratorApp.swift; sourceTree = "<group>"; };
+		7B5F8CD82A995A8800D004D3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7B5F8CDA2A995A8A00D004D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7B5F8CDD2A995A8A00D004D3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7B5F8CDF2A995A8A00D004D3 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		7B5F8CE22A995A8A00D004D3 /* Musicianship_ExamGenerator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Musicianship_ExamGenerator.xcdatamodel; sourceTree = "<group>"; };
+		7B5F8CE42A995A8A00D004D3 /* Musicianship_ExamGenerator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Musicianship_ExamGenerator.entitlements; sourceTree = "<group>"; };
+		7B5F8CE92A995A8A00D004D3 /* Musicianship_ExamGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Musicianship_ExamGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B5F8CED2A995A8A00D004D3 /* Musicianship_ExamGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Musicianship_ExamGeneratorTests.swift; sourceTree = "<group>"; };
+		7B5F8CF32A995A8A00D004D3 /* Musicianship_ExamGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Musicianship_ExamGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B5F8CF72A995A8A00D004D3 /* Musicianship_ExamGeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Musicianship_ExamGeneratorUITests.swift; sourceTree = "<group>"; };
+		7B5F8CF92A995A8B00D004D3 /* Musicianship_ExamGeneratorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Musicianship_ExamGeneratorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7B5F8CD02A995A8800D004D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B5F8CE62A995A8A00D004D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B5F8CF02A995A8A00D004D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7B5F8CCA2A995A8800D004D3 = {
+			isa = PBXGroup;
+			children = (
+				7B5F8CD52A995A8800D004D3 /* Musicianship_ExamGenerator */,
+				7B5F8CEC2A995A8A00D004D3 /* Musicianship_ExamGeneratorTests */,
+				7B5F8CF62A995A8A00D004D3 /* Musicianship_ExamGeneratorUITests */,
+				7B5F8CD42A995A8800D004D3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7B5F8CD42A995A8800D004D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7B5F8CD32A995A8800D004D3 /* Musicianship_ExamGenerator.app */,
+				7B5F8CE92A995A8A00D004D3 /* Musicianship_ExamGeneratorTests.xctest */,
+				7B5F8CF32A995A8A00D004D3 /* Musicianship_ExamGeneratorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7B5F8CD52A995A8800D004D3 /* Musicianship_ExamGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				7B5F8CD62A995A8800D004D3 /* Musicianship_ExamGeneratorApp.swift */,
+				7B5F8CD82A995A8800D004D3 /* ContentView.swift */,
+				7B5F8CDA2A995A8A00D004D3 /* Assets.xcassets */,
+				7B5F8CDF2A995A8A00D004D3 /* Persistence.swift */,
+				7B5F8CE42A995A8A00D004D3 /* Musicianship_ExamGenerator.entitlements */,
+				7B5F8CE12A995A8A00D004D3 /* Musicianship_ExamGenerator.xcdatamodeld */,
+				7B5F8CDC2A995A8A00D004D3 /* Preview Content */,
+			);
+			path = Musicianship_ExamGenerator;
+			sourceTree = "<group>";
+		};
+		7B5F8CDC2A995A8A00D004D3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7B5F8CDD2A995A8A00D004D3 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7B5F8CEC2A995A8A00D004D3 /* Musicianship_ExamGeneratorTests */ = {
+			isa = PBXGroup;
+			children = (
+				7B5F8CED2A995A8A00D004D3 /* Musicianship_ExamGeneratorTests.swift */,
+			);
+			path = Musicianship_ExamGeneratorTests;
+			sourceTree = "<group>";
+		};
+		7B5F8CF62A995A8A00D004D3 /* Musicianship_ExamGeneratorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7B5F8CF72A995A8A00D004D3 /* Musicianship_ExamGeneratorUITests.swift */,
+				7B5F8CF92A995A8B00D004D3 /* Musicianship_ExamGeneratorUITestsLaunchTests.swift */,
+			);
+			path = Musicianship_ExamGeneratorUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7B5F8CD22A995A8800D004D3 /* Musicianship_ExamGenerator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B5F8CFD2A995A8B00D004D3 /* Build configuration list for PBXNativeTarget "Musicianship_ExamGenerator" */;
+			buildPhases = (
+				7B5F8CCF2A995A8800D004D3 /* Sources */,
+				7B5F8CD02A995A8800D004D3 /* Frameworks */,
+				7B5F8CD12A995A8800D004D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Musicianship_ExamGenerator;
+			productName = Musicianship_ExamGenerator;
+			productReference = 7B5F8CD32A995A8800D004D3 /* Musicianship_ExamGenerator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7B5F8CE82A995A8A00D004D3 /* Musicianship_ExamGeneratorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B5F8D002A995A8B00D004D3 /* Build configuration list for PBXNativeTarget "Musicianship_ExamGeneratorTests" */;
+			buildPhases = (
+				7B5F8CE52A995A8A00D004D3 /* Sources */,
+				7B5F8CE62A995A8A00D004D3 /* Frameworks */,
+				7B5F8CE72A995A8A00D004D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B5F8CEB2A995A8A00D004D3 /* PBXTargetDependency */,
+			);
+			name = Musicianship_ExamGeneratorTests;
+			productName = Musicianship_ExamGeneratorTests;
+			productReference = 7B5F8CE92A995A8A00D004D3 /* Musicianship_ExamGeneratorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7B5F8CF22A995A8A00D004D3 /* Musicianship_ExamGeneratorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B5F8D032A995A8B00D004D3 /* Build configuration list for PBXNativeTarget "Musicianship_ExamGeneratorUITests" */;
+			buildPhases = (
+				7B5F8CEF2A995A8A00D004D3 /* Sources */,
+				7B5F8CF02A995A8A00D004D3 /* Frameworks */,
+				7B5F8CF12A995A8A00D004D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B5F8CF52A995A8A00D004D3 /* PBXTargetDependency */,
+			);
+			name = Musicianship_ExamGeneratorUITests;
+			productName = Musicianship_ExamGeneratorUITests;
+			productReference = 7B5F8CF32A995A8A00D004D3 /* Musicianship_ExamGeneratorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7B5F8CCB2A995A8800D004D3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					7B5F8CD22A995A8800D004D3 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					7B5F8CE82A995A8A00D004D3 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 7B5F8CD22A995A8800D004D3;
+					};
+					7B5F8CF22A995A8A00D004D3 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 7B5F8CD22A995A8800D004D3;
+					};
+				};
+			};
+			buildConfigurationList = 7B5F8CCE2A995A8800D004D3 /* Build configuration list for PBXProject "Musicianship_ExamGenerator" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7B5F8CCA2A995A8800D004D3;
+			productRefGroup = 7B5F8CD42A995A8800D004D3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7B5F8CD22A995A8800D004D3 /* Musicianship_ExamGenerator */,
+				7B5F8CE82A995A8A00D004D3 /* Musicianship_ExamGeneratorTests */,
+				7B5F8CF22A995A8A00D004D3 /* Musicianship_ExamGeneratorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7B5F8CD12A995A8800D004D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B5F8CDE2A995A8A00D004D3 /* Preview Assets.xcassets in Resources */,
+				7B5F8CDB2A995A8A00D004D3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B5F8CE72A995A8A00D004D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B5F8CF12A995A8A00D004D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7B5F8CCF2A995A8800D004D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B5F8CE02A995A8A00D004D3 /* Persistence.swift in Sources */,
+				7B5F8CE32A995A8A00D004D3 /* Musicianship_ExamGenerator.xcdatamodeld in Sources */,
+				7B5F8CD92A995A8800D004D3 /* ContentView.swift in Sources */,
+				7B5F8CD72A995A8800D004D3 /* Musicianship_ExamGeneratorApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B5F8CE52A995A8A00D004D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B5F8CEE2A995A8A00D004D3 /* Musicianship_ExamGeneratorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B5F8CEF2A995A8A00D004D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B5F8CFA2A995A8B00D004D3 /* Musicianship_ExamGeneratorUITestsLaunchTests.swift in Sources */,
+				7B5F8CF82A995A8A00D004D3 /* Musicianship_ExamGeneratorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7B5F8CEB2A995A8A00D004D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B5F8CD22A995A8800D004D3 /* Musicianship_ExamGenerator */;
+			targetProxy = 7B5F8CEA2A995A8A00D004D3 /* PBXContainerItemProxy */;
+		};
+		7B5F8CF52A995A8A00D004D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B5F8CD22A995A8800D004D3 /* Musicianship_ExamGenerator */;
+			targetProxy = 7B5F8CF42A995A8A00D004D3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7B5F8CFB2A995A8B00D004D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7B5F8CFC2A995A8B00D004D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		7B5F8CFE2A995A8B00D004D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Musicianship_ExamGenerator/Musicianship_ExamGenerator.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Musicianship_ExamGenerator/Preview Content\"";
+				DEVELOPMENT_TEAM = 98U3T95RVJ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dmurphy.test.Musicianship-ExamGenerator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		7B5F8CFF2A995A8B00D004D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Musicianship_ExamGenerator/Musicianship_ExamGenerator.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Musicianship_ExamGenerator/Preview Content\"";
+				DEVELOPMENT_TEAM = 98U3T95RVJ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dmurphy.test.Musicianship-ExamGenerator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		7B5F8D012A995A8B00D004D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 98U3T95RVJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dmurphy.test.Musicianship-ExamGeneratorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Musicianship_ExamGenerator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Musicianship_ExamGenerator";
+			};
+			name = Debug;
+		};
+		7B5F8D022A995A8B00D004D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 98U3T95RVJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dmurphy.test.Musicianship-ExamGeneratorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Musicianship_ExamGenerator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Musicianship_ExamGenerator";
+			};
+			name = Release;
+		};
+		7B5F8D042A995A8B00D004D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 98U3T95RVJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dmurphy.test.Musicianship-ExamGeneratorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Musicianship_ExamGenerator;
+			};
+			name = Debug;
+		};
+		7B5F8D052A995A8B00D004D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 98U3T95RVJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dmurphy.test.Musicianship-ExamGeneratorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Musicianship_ExamGenerator;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7B5F8CCE2A995A8800D004D3 /* Build configuration list for PBXProject "Musicianship_ExamGenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B5F8CFB2A995A8B00D004D3 /* Debug */,
+				7B5F8CFC2A995A8B00D004D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B5F8CFD2A995A8B00D004D3 /* Build configuration list for PBXNativeTarget "Musicianship_ExamGenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B5F8CFE2A995A8B00D004D3 /* Debug */,
+				7B5F8CFF2A995A8B00D004D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B5F8D002A995A8B00D004D3 /* Build configuration list for PBXNativeTarget "Musicianship_ExamGeneratorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B5F8D012A995A8B00D004D3 /* Debug */,
+				7B5F8D022A995A8B00D004D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B5F8D032A995A8B00D004D3 /* Build configuration list for PBXNativeTarget "Musicianship_ExamGeneratorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B5F8D042A995A8B00D004D3 /* Debug */,
+				7B5F8D052A995A8B00D004D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7B5F8CE12A995A8A00D004D3 /* Musicianship_ExamGenerator.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7B5F8CE22A995A8A00D004D3 /* Musicianship_ExamGenerator.xcdatamodel */,
+			);
+			currentVersion = 7B5F8CE22A995A8A00D004D3 /* Musicianship_ExamGenerator.xcdatamodel */;
+			path = Musicianship_ExamGenerator.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7B5F8CCB2A995A8800D004D3 /* Project object */;
+}
