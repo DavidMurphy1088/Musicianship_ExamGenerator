@@ -23,7 +23,6 @@ class Content : ObservableObject {
     private init() {
         contentSections.append(ContentSection(parent: nil, name: "", type: ""))
     }
-    
     func generateExam(templateSection:ContentSection) {
         print("Generate for template:", templateSection.getPath())
         for section in self.contentSections {
@@ -37,8 +36,9 @@ class Content : ObservableObject {
                 let practiceExamplesForType = practiceParent?.deepSearch(testCondition: {section in
                     return (["Type_1", "Type_2", "Type_3", "Type_4", "Type_4"]).contains(section.type)
                 })
-                for c in practiceExamplesForType! {
-                    print(c.getPath())
+                for example in practiceExamplesForType! {
+                    print(example.getPath())
+                    self.contentSectionUsage.append(ContentSectionUsage(contentSection: example, type: example.type))
                 }
             }
         }
