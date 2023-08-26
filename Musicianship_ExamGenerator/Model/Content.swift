@@ -1,13 +1,25 @@
 
 import Foundation
 
+class ContentSectionUsage {
+    var contentSection:ContentSection
+    var type:String
+    var usages:Int
+    init(contentSection:ContentSection, type:String) {
+        self.contentSection = contentSection
+        self.type = type
+        self.usages = 0
+    }
+}
+
 class Content : ObservableObject {
     static let shared = Content()
     @Published var dataLoaded = false
     let googleAPI = GoogleAPI.shared
     var contentSections:[ContentSection] = []
     var templateSections:[ContentSection] = []
-
+    var contentSectionUsage:[ContentSectionUsage] = []
+    
     private init() {
         contentSections.append(ContentSection(parent: nil, name: "", type: ""))
     }
@@ -23,7 +35,7 @@ class Content : ObservableObject {
                 
                 print ("===>Practice Parent", practiceParent!.getPath())
                 let practiceExamplesForType = practiceParent?.deepSearch(testCondition: {section in
-                    return section.type == "Type_1"
+                    return (["Type_1", "Type_2", "Type_3", "Type_4", "Type_4"]).contains(section.type)
                 })
                 for c in practiceExamplesForType! {
                     print(c.getPath())

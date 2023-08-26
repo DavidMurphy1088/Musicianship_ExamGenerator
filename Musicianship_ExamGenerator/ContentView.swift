@@ -12,7 +12,7 @@ struct RowView: View {
             Text("\(contentSection.name)").padding()
             Button(action: {
                 //print("Button for \(contentSection.name) was tapped!")
-                content.generateExam(contentSection: contentSection)
+                content.generateExam(templateSection: contentSection)
             }) {
                 Text("Generate Exam")
                     .padding()
