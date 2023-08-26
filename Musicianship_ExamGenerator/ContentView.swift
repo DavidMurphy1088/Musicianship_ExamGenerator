@@ -2,7 +2,7 @@ import SwiftUI
 import CoreData
 
 struct RowView: View {
-    @ObservedObject var content = Content.shared
+    @ObservedObject var content = ExamGenerator.shared
 
     let contentSection: ContentSection
 
@@ -12,7 +12,7 @@ struct RowView: View {
             Text("\(contentSection.name)").padding()
             Button(action: {
                 //print("Button for \(contentSection.name) was tapped!")
-                content.generateExam(templateSection: contentSection)
+                content.generateExam(templateSection: contentSection, examsToGenerate: 200)
             }) {
                 Text("Generate Exam")
                     .padding()
@@ -24,7 +24,7 @@ struct RowView: View {
 }
 
 struct ContentView: View {
-    @ObservedObject var content = Content.shared
+    @ObservedObject var content = ExamGenerator.shared
     @State var status:String = ""
     
     func test() {

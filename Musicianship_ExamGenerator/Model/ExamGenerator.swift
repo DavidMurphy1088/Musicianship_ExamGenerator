@@ -1,5 +1,6 @@
 
 import Foundation
+import AppKit
 
 class ContentSectionUsage {
     var contentSection:ContentSection
@@ -12,34 +13,156 @@ class ContentSectionUsage {
     }
 }
 
-class Content : ObservableObject {
-    static let shared = Content()
+class ExamGenerator : ObservableObject {
+    static let shared = ExamGenerator()
     @Published var dataLoaded = false
     let googleAPI = GoogleAPI.shared
     var contentSections:[ContentSection] = []
     var templateSections:[ContentSection] = []
     var contentSectionUsage:[ContentSectionUsage] = []
+    let fileName = "exam.txt"
     
     private init() {
         contentSections.append(ContentSection(parent: nil, name: "", type: ""))
+        deleteFileInContainerIfExists(fileName: fileName)
     }
-    func generateExam(templateSection:ContentSection) {
+
+    func deleteFileInContainerIfExists(fileName: String) {
+        let containerDocumentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let fileURL = containerDocumentsURL.appendingPathComponent(fileName)
+        
+        let fileManager = FileManager.default
+        if fileManager.fileExists(atPath: fileURL.path) {
+            do {
+                try fileManager.removeItem(at: fileURL)
+                print("File \(fileName) deleted.")
+            } catch {
+                print("Error deleting file: \(error)")
+            }
+        } else {
+            print("File \(fileName) does not exist.")
+        }
+        print("File created at:", containerDocumentsURL)
+    }
+
+    func appendToFile(_ line: String) {
+        guard let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            print("Could not find the documents directory.")
+            return
+        }
+
+        let filePath = documentsDirectory.appendingPathComponent(fileName)
+        var dataLine = ""
+        dataLine += line
+        let dataToAppend = (dataLine + "\n").data(using: .utf8)!
+        
+        if !FileManager.default.fileExists(atPath: filePath.path) {
+            FileManager.default.createFile(atPath: filePath.path, contents: nil, attributes: nil)
+        }
+
+        do {
+            let fileHandle = try FileHandle(forWritingTo: filePath)
+            fileHandle.seekToEndOfFile()
+            fileHandle.write(dataToAppend)
+            fileHandle.closeFile()
+        } catch {
+            print("Error writing to file: \(error)")
+        }
+    }
+    
+    func addTabs(_ inStr:String, tabs:Int) -> String {
+        var res = inStr
+        for _ in 0..<tabs {
+           res += "\t"
+        }
+        return res
+    }
+    
+    func getExampleForType(type:String) -> ContentSection {
+        let filteredByType = contentSectionUsage.filter { $0.type == type }
+        let sortedByUsage = filteredByType.sorted(by: { $0.usages < $1.usages })
+        let minUsage = sortedByUsage[0].usages
+        let maxUsage = sortedByUsage[sortedByUsage.count - 1].usages
+        let numberOfMinimins = sortedByUsage.filter { $0.usages == minUsage }.count
+        let randomChoice = Int.random(in: 0...numberOfMinimins)
+        if randomChoice >= sortedByUsage.count {
+            print("HERE")
+        }
+        let selected = sortedByUsage[randomChoice]
+        selected.usages += 1
+        return selected.contentSection
+    }
+    
+    func generateExam(templateSection:ContentSection, examsToGenerate:Int) {
         print("Generate for template:", templateSection.getPath())
+        var practiceExamples:[ContentSection] = []
+        var practiceParent:ContentSection?
+        let practiceTypes = ["Type_1", "Type_2", "Type_3", "Type_4", "Type_5"]
+        
         for section in self.contentSections {
             if section.parent == templateSection {
+                
+                ///find the template's parent grade
                 let examModeParent = templateSection.parent
                 let gradeParent = examModeParent!.parent
-                print ("===>Grade Parent", gradeParent!.getPath())
-                let practiceParent = gradeParent?.subSections[0]
+                //print ("===>Grade Parent", gradeParent!.getPath())
                 
-                print ("===>Practice Parent", practiceParent!.getPath())
-                let practiceExamplesForType = practiceParent?.deepSearch(testCondition: {section in
-                    return (["Type_1", "Type_2", "Type_3", "Type_4", "Type_4"]).contains(section.type)
-                })
-                for example in practiceExamplesForType! {
-                    print(example.getPath())
-                    self.contentSectionUsage.append(ContentSectionUsage(contentSection: example, type: example.type))
+                ///find the grade's practice examples
+                practiceParent = gradeParent?.subSections[0]
+                break
+            }
+        }
+        
+        guard let practiceParent = practiceParent else {
+            Logger.logger.reportError(self, "No practice parent")
+            return
+        }
+        
+        //print ("===>Practice Parent", practiceParent!.getPath())
+        practiceExamples = (practiceParent.deepSearch(testCondition: {section in
+            return (practiceTypes).contains(section.type)
+        }))
+        
+        ///place the practice examples into a usage array for allocation to exams
+        print("\(practiceExamples.count) examples found under practice mode")
+        for practiceExample in practiceExamples {
+            self.contentSectionUsage.append(ContentSectionUsage(contentSection: practiceExample, type: practiceExample.type))
+        }
+
+        var selectionDescription = "Selected from - "
+        for type in practiceTypes {
+            let filteredByType = practiceExamples.filter { $0.type == type }
+            let msg = "\(filteredByType.count) examples for type:\(type), "
+            selectionDescription += msg
+            print(msg)
+        }
+        
+        for i in 0..<examsToGenerate {
+            var line = addTabs("", tabs: 4) + "Exam "
+            if i < 10 {
+                line += " " + String(i+1)
+            }
+            else {
+                line += "" + String(i+1)
+            }
+            appendToFile(line)
+            let currentDate = Date()
+            let dateFormatter = DateFormatter()
+
+            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            let formattedDate = dateFormatter.string(from: currentDate)
+            line = addTabs("\\\\", tabs: 7) + "generated:" + formattedDate
+            appendToFile(line)
+            line = addTabs("\\\\", tabs: 7) + selectionDescription
+            appendToFile(line)
+
+            for subSection in templateSection.subSections {
+                let example = getExampleForType(type: subSection.type)
+                var line = addTabs("", tabs: 5) + subSection.name + "\t\t" + example.type + "\t\t"
+                for cells in example.contentSectionData.data {
+                    line += cells + "\t"
                 }
+                appendToFile(line)
             }
         }
     }

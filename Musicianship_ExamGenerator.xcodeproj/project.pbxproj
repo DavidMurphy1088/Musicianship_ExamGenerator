@@ -19,7 +19,7 @@
 		7B5F8D082A995B5700D004D3 /* GoogleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5F8D072A995B5700D004D3 /* GoogleAPI.swift */; };
 		7B8C2B942A995E7000B5C29E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8C2B932A995E7000B5C29E /* Logger.swift */; };
 		7B98748C2A9961F0002C5749 /* GoogleAPI.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B98748B2A9961F0002C5749 /* GoogleAPI.plist */; };
-		7B98748E2A99709D002C5749 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B98748D2A99709D002C5749 /* Content.swift */; };
+		7B98748E2A99709D002C5749 /* ExamGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B98748D2A99709D002C5749 /* ExamGenerator.swift */; };
 		7B9874902A9971C0002C5749 /* ContentSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B98748F2A9971C0002C5749 /* ContentSection.swift */; };
 		9CD4D0CE0273D489B7461128 /* Pods_Musicianship_ExamGenerator_Musicianship_ExamGeneratorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3448E479AA6511C6D82C992 /* Pods_Musicianship_ExamGenerator_Musicianship_ExamGeneratorUITests.framework */; };
 		A8DE7495CF3BA1A87795CCF9 /* Pods_Musicianship_ExamGeneratorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134C3985750EB2207FCAF641 /* Pods_Musicianship_ExamGeneratorTests.framework */; };
@@ -65,7 +65,7 @@
 		7B5F8D072A995B5700D004D3 /* GoogleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAPI.swift; sourceTree = "<group>"; };
 		7B8C2B932A995E7000B5C29E /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		7B98748B2A9961F0002C5749 /* GoogleAPI.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GoogleAPI.plist; sourceTree = "<group>"; };
-		7B98748D2A99709D002C5749 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		7B98748D2A99709D002C5749 /* ExamGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamGenerator.swift; sourceTree = "<group>"; };
 		7B98748F2A9971C0002C5749 /* ContentSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSection.swift; sourceTree = "<group>"; };
 		867C89A09826B535ABD3E57D /* Pods-Musicianship_ExamGeneratorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Musicianship_ExamGeneratorTests.release.xcconfig"; path = "Target Support Files/Pods-Musicianship_ExamGeneratorTests/Pods-Musicianship_ExamGeneratorTests.release.xcconfig"; sourceTree = "<group>"; };
 		9D13603B6AB07063F8270E30 /* Pods-Musicianship_ExamGenerator-Musicianship_ExamGeneratorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Musicianship_ExamGenerator-Musicianship_ExamGeneratorUITests.debug.xcconfig"; path = "Target Support Files/Pods-Musicianship_ExamGenerator-Musicianship_ExamGeneratorUITests/Pods-Musicianship_ExamGenerator-Musicianship_ExamGeneratorUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -192,7 +192,7 @@
 			children = (
 				7B5F8D072A995B5700D004D3 /* GoogleAPI.swift */,
 				7B8C2B932A995E7000B5C29E /* Logger.swift */,
-				7B98748D2A99709D002C5749 /* Content.swift */,
+				7B98748D2A99709D002C5749 /* ExamGenerator.swift */,
 				7B98748F2A9971C0002C5749 /* ContentSection.swift */,
 			);
 			path = Model;
@@ -447,7 +447,7 @@
 			files = (
 				7B5F8CE02A995A8A00D004D3 /* Persistence.swift in Sources */,
 				7B8C2B942A995E7000B5C29E /* Logger.swift in Sources */,
-				7B98748E2A99709D002C5749 /* Content.swift in Sources */,
+				7B98748E2A99709D002C5749 /* ExamGenerator.swift in Sources */,
 				7B5F8CE32A995A8A00D004D3 /* Musicianship_ExamGenerator.xcdatamodeld in Sources */,
 				7B5F8CD92A995A8800D004D3 /* ContentView.swift in Sources */,
 				7B5F8D082A995B5700D004D3 /* GoogleAPI.swift in Sources */,
