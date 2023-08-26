@@ -1,85 +1,70 @@
-//
-//  ContentView.swift
-//  Musicianship_ExamGenerator
-//
-//  Created by David Murphy on 8/26/23.
-//
-
 import SwiftUI
 import CoreData
 
-struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
+struct RowView: View {
+    @ObservedObject var content = Content.shared
 
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
+    let contentSection: ContentSection
 
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
-                    }
-                }
-                .onDelete(perform: deleteItems)
+        HStack {
+            Text("\(contentSection.getPath())").padding()
+            Text("\(contentSection.name)").padding()
+            Button(action: {
+                //print("Button for \(contentSection.name) was tapped!")
+                content.generateExam(contentSection: contentSection)
+            }) {
+                Text("Generate Exam")
+                    .padding()
             }
-            .toolbar {
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-            Text("Select an item")
+            .padding()
         }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
+        .padding()
     }
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+struct ContentView: View {
+    @ObservedObject var content = Content.shared
+    @State var status:String = ""
+    
+    func test() {
+        let url = URL(string: "https://google.com")!
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let error = error {
+                print("Error:", error)
+                return
+            }
+            
+            if let data = data {
+                print(String(data: data, encoding: .utf8) ?? "")
+            }
+        }
+        task.resume()
     }
+    
+    var body: some View {
+        VStack {
+
+            Button(action: {
+                self.status = "Loading ..."
+                content.readContent()
+                
+            }) {
+                Text("Load Content").padding()
+            }.padding()
+            
+            if self.content.dataLoaded {
+                List(content.templateSections, id: \.self.id) { template in
+                    RowView(contentSection: template)
+                }
+                .padding()
+            }
+            else {
+                Text("\(self.status)")
+            }
+        }
+    }
+
+
 }
+

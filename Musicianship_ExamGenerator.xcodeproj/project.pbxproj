@@ -16,6 +16,14 @@
 		7B5F8CEE2A995A8A00D004D3 /* Musicianship_ExamGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5F8CED2A995A8A00D004D3 /* Musicianship_ExamGeneratorTests.swift */; };
 		7B5F8CF82A995A8A00D004D3 /* Musicianship_ExamGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5F8CF72A995A8A00D004D3 /* Musicianship_ExamGeneratorUITests.swift */; };
 		7B5F8CFA2A995A8B00D004D3 /* Musicianship_ExamGeneratorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5F8CF92A995A8B00D004D3 /* Musicianship_ExamGeneratorUITestsLaunchTests.swift */; };
+		7B5F8D082A995B5700D004D3 /* GoogleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5F8D072A995B5700D004D3 /* GoogleAPI.swift */; };
+		7B8C2B942A995E7000B5C29E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8C2B932A995E7000B5C29E /* Logger.swift */; };
+		7B98748C2A9961F0002C5749 /* GoogleAPI.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B98748B2A9961F0002C5749 /* GoogleAPI.plist */; };
+		7B98748E2A99709D002C5749 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B98748D2A99709D002C5749 /* Content.swift */; };
+		7B9874902A9971C0002C5749 /* ContentSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B98748F2A9971C0002C5749 /* ContentSection.swift */; };
+		9CD4D0CE0273D489B7461128 /* Pods_Musicianship_ExamGenerator_Musicianship_ExamGeneratorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3448E479AA6511C6D82C992 /* Pods_Musicianship_ExamGenerator_Musicianship_ExamGeneratorUITests.framework */; };
+		A8DE7495CF3BA1A87795CCF9 /* Pods_Musicianship_ExamGeneratorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134C3985750EB2207FCAF641 /* Pods_Musicianship_ExamGeneratorTests.framework */; };
+		D1DC18D7E90C0EA425BC48EC /* Pods_Musicianship_ExamGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB66657A154B8EF7CEBEC0D2 /* Pods_Musicianship_ExamGenerator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		134C3985750EB2207FCAF641 /* Pods_Musicianship_ExamGeneratorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Musicianship_ExamGeneratorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D3DC69829CF046058F7075B /* Pods-Musicianship_ExamGenerator-Musicianship_ExamGeneratorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Musicianship_ExamGenerator-Musicianship_ExamGeneratorUITests.release.xcconfig"; path = "Target Support Files/Pods-Musicianship_ExamGenerator-Musicianship_ExamGeneratorUITests/Pods-Musicianship_ExamGenerator-Musicianship_ExamGeneratorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		50FED41A9CB2344777DD451C /* Pods-Musicianship_ExamGenerator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Musicianship_ExamGenerator.debug.xcconfig"; path = "Target Support Files/Pods-Musicianship_ExamGenerator/Pods-Musicianship_ExamGenerator.debug.xcconfig"; sourceTree = "<group>"; };
+		66B6400446AD68C098425E6D /* Pods-Musicianship_ExamGeneratorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Musicianship_ExamGeneratorTests.debug.xcconfig"; path = "Target Support Files/Pods-Musicianship_ExamGeneratorTests/Pods-Musicianship_ExamGeneratorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6A40A94230631E92537E91A7 /* Pods-Musicianship_ExamGenerator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Musicianship_ExamGenerator.release.xcconfig"; path = "Target Support Files/Pods-Musicianship_ExamGenerator/Pods-Musicianship_ExamGenerator.release.xcconfig"; sourceTree = "<group>"; };
 		7B5F8CD32A995A8800D004D3 /* Musicianship_ExamGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Musicianship_ExamGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B5F8CD62A995A8800D004D3 /* Musicianship_ExamGeneratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Musicianship_ExamGeneratorApp.swift; sourceTree = "<group>"; };
 		7B5F8CD82A995A8800D004D3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,6 +62,15 @@
 		7B5F8CF32A995A8A00D004D3 /* Musicianship_ExamGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Musicianship_ExamGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B5F8CF72A995A8A00D004D3 /* Musicianship_ExamGeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Musicianship_ExamGeneratorUITests.swift; sourceTree = "<group>"; };
 		7B5F8CF92A995A8B00D004D3 /* Musicianship_ExamGeneratorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Musicianship_ExamGeneratorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7B5F8D072A995B5700D004D3 /* GoogleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAPI.swift; sourceTree = "<group>"; };
+		7B8C2B932A995E7000B5C29E /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		7B98748B2A9961F0002C5749 /* GoogleAPI.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GoogleAPI.plist; sourceTree = "<group>"; };
+		7B98748D2A99709D002C5749 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		7B98748F2A9971C0002C5749 /* ContentSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSection.swift; sourceTree = "<group>"; };
+		867C89A09826B535ABD3E57D /* Pods-Musicianship_ExamGeneratorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Musicianship_ExamGeneratorTests.release.xcconfig"; path = "Target Support Files/Pods-Musicianship_ExamGeneratorTests/Pods-Musicianship_ExamGeneratorTests.release.xcconfig"; sourceTree = "<group>"; };
+		9D13603B6AB07063F8270E30 /* Pods-Musicianship_ExamGenerator-Musicianship_ExamGeneratorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Musicianship_ExamGenerator-Musicianship_ExamGeneratorUITests.debug.xcconfig"; path = "Target Support Files/Pods-Musicianship_ExamGenerator-Musicianship_ExamGeneratorUITests/Pods-Musicianship_ExamGenerator-Musicianship_ExamGeneratorUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A3448E479AA6511C6D82C992 /* Pods_Musicianship_ExamGenerator_Musicianship_ExamGeneratorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Musicianship_ExamGenerator_Musicianship_ExamGeneratorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB66657A154B8EF7CEBEC0D2 /* Pods_Musicianship_ExamGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Musicianship_ExamGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1DC18D7E90C0EA425BC48EC /* Pods_Musicianship_ExamGenerator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8DE7495CF3BA1A87795CCF9 /* Pods_Musicianship_ExamGeneratorTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +94,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CD4D0CE0273D489B7461128 /* Pods_Musicianship_ExamGenerator_Musicianship_ExamGeneratorUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0410EB34AAC6C8A7C5D0E49D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB66657A154B8EF7CEBEC0D2 /* Pods_Musicianship_ExamGenerator.framework */,
+				A3448E479AA6511C6D82C992 /* Pods_Musicianship_ExamGenerator_Musicianship_ExamGeneratorUITests.framework */,
+				134C3985750EB2207FCAF641 /* Pods_Musicianship_ExamGeneratorTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0F2425D23F1B9BAD718B8B44 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				50FED41A9CB2344777DD451C /* Pods-Musicianship_ExamGenerator.debug.xcconfig */,
+				6A40A94230631E92537E91A7 /* Pods-Musicianship_ExamGenerator.release.xcconfig */,
+				9D13603B6AB07063F8270E30 /* Pods-Musicianship_ExamGenerator-Musicianship_ExamGeneratorUITests.debug.xcconfig */,
+				3D3DC69829CF046058F7075B /* Pods-Musicianship_ExamGenerator-Musicianship_ExamGeneratorUITests.release.xcconfig */,
+				66B6400446AD68C098425E6D /* Pods-Musicianship_ExamGeneratorTests.debug.xcconfig */,
+				867C89A09826B535ABD3E57D /* Pods-Musicianship_ExamGeneratorTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7B5F8CCA2A995A8800D004D3 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +131,8 @@
 				7B5F8CEC2A995A8A00D004D3 /* Musicianship_ExamGeneratorTests */,
 				7B5F8CF62A995A8A00D004D3 /* Musicianship_ExamGeneratorUITests */,
 				7B5F8CD42A995A8800D004D3 /* Products */,
+				0F2425D23F1B9BAD718B8B44 /* Pods */,
+				0410EB34AAC6C8A7C5D0E49D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +149,8 @@
 		7B5F8CD52A995A8800D004D3 /* Musicianship_ExamGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				7B98748A2A9961C5002C5749 /* APIKeys */,
+				7B5F8D062A995B1A00D004D3 /* Model */,
 				7B5F8CD62A995A8800D004D3 /* Musicianship_ExamGeneratorApp.swift */,
 				7B5F8CD82A995A8800D004D3 /* ContentView.swift */,
 				7B5F8CDA2A995A8A00D004D3 /* Assets.xcassets */,
@@ -135,6 +187,25 @@
 			path = Musicianship_ExamGeneratorUITests;
 			sourceTree = "<group>";
 		};
+		7B5F8D062A995B1A00D004D3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7B5F8D072A995B5700D004D3 /* GoogleAPI.swift */,
+				7B8C2B932A995E7000B5C29E /* Logger.swift */,
+				7B98748D2A99709D002C5749 /* Content.swift */,
+				7B98748F2A9971C0002C5749 /* ContentSection.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7B98748A2A9961C5002C5749 /* APIKeys */ = {
+			isa = PBXGroup;
+			children = (
+				7B98748B2A9961F0002C5749 /* GoogleAPI.plist */,
+			);
+			path = APIKeys;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,9 +213,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B5F8CFD2A995A8B00D004D3 /* Build configuration list for PBXNativeTarget "Musicianship_ExamGenerator" */;
 			buildPhases = (
+				FDAAE41127D53F58FC27BA10 /* [CP] Check Pods Manifest.lock */,
 				7B5F8CCF2A995A8800D004D3 /* Sources */,
 				7B5F8CD02A995A8800D004D3 /* Frameworks */,
 				7B5F8CD12A995A8800D004D3 /* Resources */,
+				A3795E278D4CDC0A75007EA0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -159,6 +232,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B5F8D002A995A8B00D004D3 /* Build configuration list for PBXNativeTarget "Musicianship_ExamGeneratorTests" */;
 			buildPhases = (
+				36DF71D809DFCE74401805BE /* [CP] Check Pods Manifest.lock */,
 				7B5F8CE52A995A8A00D004D3 /* Sources */,
 				7B5F8CE62A995A8A00D004D3 /* Frameworks */,
 				7B5F8CE72A995A8A00D004D3 /* Resources */,
@@ -177,9 +251,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B5F8D032A995A8B00D004D3 /* Build configuration list for PBXNativeTarget "Musicianship_ExamGeneratorUITests" */;
 			buildPhases = (
+				FBD1C8C618528399BF25C0AE /* [CP] Check Pods Manifest.lock */,
 				7B5F8CEF2A995A8A00D004D3 /* Sources */,
 				7B5F8CF02A995A8A00D004D3 /* Frameworks */,
 				7B5F8CF12A995A8A00D004D3 /* Resources */,
+				4BE046815087860F41EA1C4A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -239,6 +315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B98748C2A9961F0002C5749 /* GoogleAPI.plist in Resources */,
 				7B5F8CDE2A995A8A00D004D3 /* Preview Assets.xcassets in Resources */,
 				7B5F8CDB2A995A8A00D004D3 /* Assets.xcassets in Resources */,
 			);
@@ -260,15 +337,122 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		36DF71D809DFCE74401805BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Musicianship_ExamGeneratorTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4BE046815087860F41EA1C4A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Musicianship_ExamGenerator-Musicianship_ExamGeneratorUITests/Pods-Musicianship_ExamGenerator-Musicianship_ExamGeneratorUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Musicianship_ExamGenerator-Musicianship_ExamGeneratorUITests/Pods-Musicianship_ExamGenerator-Musicianship_ExamGeneratorUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Musicianship_ExamGenerator-Musicianship_ExamGeneratorUITests/Pods-Musicianship_ExamGenerator-Musicianship_ExamGeneratorUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3795E278D4CDC0A75007EA0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Musicianship_ExamGenerator/Pods-Musicianship_ExamGenerator-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Musicianship_ExamGenerator/Pods-Musicianship_ExamGenerator-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Musicianship_ExamGenerator/Pods-Musicianship_ExamGenerator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBD1C8C618528399BF25C0AE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Musicianship_ExamGenerator-Musicianship_ExamGeneratorUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDAAE41127D53F58FC27BA10 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Musicianship_ExamGenerator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7B5F8CCF2A995A8800D004D3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7B5F8CE02A995A8A00D004D3 /* Persistence.swift in Sources */,
+				7B8C2B942A995E7000B5C29E /* Logger.swift in Sources */,
+				7B98748E2A99709D002C5749 /* Content.swift in Sources */,
 				7B5F8CE32A995A8A00D004D3 /* Musicianship_ExamGenerator.xcdatamodeld in Sources */,
 				7B5F8CD92A995A8800D004D3 /* ContentView.swift in Sources */,
+				7B5F8D082A995B5700D004D3 /* GoogleAPI.swift in Sources */,
 				7B5F8CD72A995A8800D004D3 /* Musicianship_ExamGeneratorApp.swift in Sources */,
+				7B9874902A9971C0002C5749 /* ContentSection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +604,7 @@
 		};
 		7B5F8CFE2A995A8B00D004D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50FED41A9CB2344777DD451C /* Pods-Musicianship_ExamGenerator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -447,6 +632,7 @@
 		};
 		7B5F8CFF2A995A8B00D004D3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A40A94230631E92537E91A7 /* Pods-Musicianship_ExamGenerator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -474,6 +660,7 @@
 		};
 		7B5F8D012A995A8B00D004D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66B6400446AD68C098425E6D /* Pods-Musicianship_ExamGeneratorTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -493,6 +680,7 @@
 		};
 		7B5F8D022A995A8B00D004D3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 867C89A09826B535ABD3E57D /* Pods-Musicianship_ExamGeneratorTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +700,7 @@
 		};
 		7B5F8D042A995A8B00D004D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D13603B6AB07063F8270E30 /* Pods-Musicianship_ExamGenerator-Musicianship_ExamGeneratorUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -529,6 +718,7 @@
 		};
 		7B5F8D052A995A8B00D004D3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D3DC69829CF046058F7075B /* Pods-Musicianship_ExamGenerator-Musicianship_ExamGeneratorUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
