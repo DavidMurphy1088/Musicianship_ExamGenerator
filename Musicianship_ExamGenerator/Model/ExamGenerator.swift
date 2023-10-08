@@ -59,7 +59,6 @@ class ExamGenerator : ObservableObject {
         if !FileManager.default.fileExists(atPath: filePath.path) {
             FileManager.default.createFile(atPath: filePath.path, contents: nil, attributes: nil)
         }
-
         do {
             let fileHandle = try FileHandle(forWritingTo: filePath)
             fileHandle.seekToEndOfFile()
@@ -118,11 +117,22 @@ class ExamGenerator : ObservableObject {
             return
         }
         
-        //print ("===>Practice Parent", practiceParent!.getPath())
+        print ("===>Examples coming from practice parent", practiceParent.getPath())
         practiceExamples = (practiceParent.deepSearch(testCondition: {section in
             return (practiceTypes).contains(section.type)
         }))
         
+        var errors = false
+        for practice in practiceExamples {
+            if !["Type_1","Type_2","Type_3","Type_4","Type_5"].contains(practice.type) {
+                print ("Bad exam example at type:", practice.type, "\tpath", practice.getPath())
+                errors = true
+            }
+        }
+        if errors {
+            return
+            
+        }
         ///place the practice examples into a usage array for allocation to exams
         print("\(practiceExamples.count) examples found under practice mode")
         for practiceExample in practiceExamples {
@@ -145,15 +155,16 @@ class ExamGenerator : ObservableObject {
             else {
                 line += "" + String(i+1)
             }
+            line += addTabs("", tabs: 3) + "Exam "
             appendToFile(line)
             let currentDate = Date()
             let dateFormatter = DateFormatter()
 
             dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
             let formattedDate = dateFormatter.string(from: currentDate)
-            line = addTabs("\\\\", tabs: 7) + "generated:" + formattedDate
+            line = addTabs("//", tabs: 7) + "generated:" + formattedDate
             appendToFile(line)
-            line = addTabs("\\\\", tabs: 7) + selectionDescription
+            line = addTabs("//", tabs: 7) + selectionDescription
             appendToFile(line)
 
             for subSection in templateSection.subSections {

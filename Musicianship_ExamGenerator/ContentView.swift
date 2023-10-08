@@ -3,7 +3,7 @@ import CoreData
 
 struct RowView: View {
     @ObservedObject var content = ExamGenerator.shared
-
+    let examCount = 100
     let contentSection: ContentSection
 
     var body: some View {
@@ -12,9 +12,9 @@ struct RowView: View {
             Text("\(contentSection.name)").padding()
             Button(action: {
                 //print("Button for \(contentSection.name) was tapped!")
-                content.generateExam(templateSection: contentSection, examsToGenerate: 200)
+                content.generateExam(templateSection: contentSection, examsToGenerate: examCount)
             }) {
-                Text("Generate Exam")
+                Text("Generate \(examCount) Exams")
                     .padding()
             }
             .padding()
@@ -54,10 +54,16 @@ struct ContentView: View {
             }.padding()
             
             if self.content.dataLoaded {
-                List(content.templateSections, id: \.self.id) { template in
-                    RowView(contentSection: template)
+                if content.templateSections.count == 0 {
+                    Text("No content sections. i.e. no exam structure defined by any row marked 'ExamTemplate'")
                 }
-                .padding()
+                else {
+                    List(content.templateSections, id: \.self.id) { template in
+                        RowView(contentSection: template)
+                    }
+                    .padding()
+                }
+                
             }
             else {
                 Text("\(self.status)")
