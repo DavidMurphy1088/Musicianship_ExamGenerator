@@ -41,14 +41,17 @@ struct ContentView: View {
         }
         task.resume()
     }
-    
+
     var body: some View {
         VStack {
+            Text("0. Backup data")
+            Text("1. Make sure all Type='ExamTemplate' are uncommented")
+            Text("2. Remove all sections marked Exam 1 , 2 etc...")
+            Text("3. Data is written to exam.txt in documents directory")
 
             Button(action: {
                 self.status = "Loading ..."
                 content.readContent()
-                
             }) {
                 Text("Load Content").padding()
             }.padding()
@@ -70,7 +73,5 @@ struct ContentView: View {
             }
         }
     }
-
-
 }
 

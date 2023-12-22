@@ -84,9 +84,7 @@ class ExamGenerator : ObservableObject {
         let maxUsage = sortedByUsage[sortedByUsage.count - 1].usages
         let numberOfMinimins = sortedByUsage.filter { $0.usages == minUsage }.count
         let randomChoice = Int.random(in: 0...numberOfMinimins)
-        if randomChoice >= sortedByUsage.count {
-            print("HERE")
-        }
+
         let selected = sortedByUsage[randomChoice]
         selected.usages += 1
         return selected.contentSection
@@ -131,21 +129,36 @@ class ExamGenerator : ObservableObject {
         }
         if errors {
             return
-            
         }
-        ///place the practice examples into a usage array for allocation to exams
+        
+        ///Place the practice examples into a usage array for allocation to exams
         print("\(practiceExamples.count) examples found under practice mode")
         for practiceExample in practiceExamples {
+            if practiceExample.type == "Type_2" {
+                continue
+            }
+//            if practiceExample.type == "Type_3" {
+//                var cs = ContentSection(parent: nil, name: "", type: "Type_2")
+//                cs.contentSectionData = practiceExample.contentSectionData
+//                cs.contentSectionData.type = "Type_2"
+//                self.contentSectionUsage.append(ContentSectionUsage(contentSection: cs, type: "Type_2"))
+//            }
             self.contentSectionUsage.append(ContentSectionUsage(contentSection: practiceExample, type: practiceExample.type))
         }
 
+        ///Display the distribution of types
         var selectionDescription = "Selected from - "
         for type in practiceTypes {
-            let filteredByType = practiceExamples.filter { $0.type == type }
+            //let filteredByType = practiceExamples.filter { $0.type == type }
+            let filteredByType = self.contentSectionUsage.filter { $0.type == type }
             let msg = "\(filteredByType.count) examples for type:\(type), "
             selectionDescription += msg
             print(msg)
         }
+        
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+        let filePath = documentsDirectory!.appendingPathComponent(fileName)
+        print("Generating to file", filePath)
         
         for i in 0..<examsToGenerate {
             var line = addTabs("", tabs: 4) + "Exam "
@@ -168,9 +181,37 @@ class ExamGenerator : ObservableObject {
             appendToFile(line)
 
             for subSection in templateSection.subSections {
-                let example = getExampleForType(type: subSection.type)
-                var line = addTabs("", tabs: 5) + subSection.name + "\t\t" + example.type + "\t\t"
-                for cells in example.contentSectionData.data {
+                ///Type 2 visual rhythms must come from type 3 Sight Reading examples
+                ///For each type 3 write a type with the same data
+                if subSection.type == "Type_2" {
+                    continue
+                }
+                ///Write the type 2 example and the type 3 example
+                let examSection:ContentSection = getExampleForType(type: subSection.type)
+
+                if subSection.type == "Type_3" {
+                    var line = addTabs("", tabs: 5) + "Clapping" + "\t\t" + "Type_2" + "\t\t"
+                    var index = 0
+                    for cell in examSection.contentSectionData.data {
+                        var cellData = cell
+                        if index == 0 {
+                            cellData = " " //Key
+                        }
+                        if index == 2 {
+                            cellData = "1" //Lines in staff
+                        }
+                        ///Remove all triad specifications
+                        var cellParts = cellData.split(separator: ",")
+                        if cellParts.count > 2 {
+                            cellData = cellParts[0]+","+cellParts[1]
+                        }
+                        line += cellData + "\t"
+                        index += 1
+                    }
+                    appendToFile(line)
+                }
+                var line = addTabs("", tabs: 5) + subSection.name + "\t\t" + examSection.type + "\t\t"
+                for cells in examSection.contentSectionData.data {
                     line += cells + "\t"
                 }
                 appendToFile(line)
@@ -193,6 +234,7 @@ class ExamGenerator : ObservableObject {
                         self.loadSheetData(sheetRows: sheetRows)
                         DispatchQueue.main.async {
                             self.dataLoaded = true
+                            print("====== data loaded", self.dataLoaded)
                         }
                     }
                     catch {
@@ -224,9 +266,7 @@ class ExamGenerator : ObservableObject {
         
         for rowCells in sheetRows {
             rowNum += 1
-            if rowNum == 123 {
-                print("+++")
-            }
+
             if rowCells.count > 0 {
                 if rowCells[0].hasPrefix("//")  {
                     continue
@@ -294,6 +334,7 @@ class ExamGenerator : ObservableObject {
                         levelContents[keyLevel] = contentSection
                         parent?.subSections.append(contentSection)
                         self.contentSections.append(contentSection)
+                        
                         if contentSection.type == "ExamTemplate" {
                             self.templateSections.append(contentSection)
                         }

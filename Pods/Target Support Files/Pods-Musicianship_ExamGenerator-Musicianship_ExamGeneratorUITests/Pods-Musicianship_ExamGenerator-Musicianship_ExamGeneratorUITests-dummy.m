@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_Musicianship_ExamGenerator_Musicianship_ExamGeneratorUITests : NSObject
+@end
+@implementation PodsDummy_Pods_Musicianship_ExamGenerator_Musicianship_ExamGeneratorUITests
+@end

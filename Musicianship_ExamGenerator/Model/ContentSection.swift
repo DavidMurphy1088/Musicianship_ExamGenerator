@@ -32,7 +32,7 @@ class ContentSection: Codable, Identifiable, Hashable, Equatable {
     var parent:ContentSection?
     var name: String
     var type:String
-    let contentSectionData:ContentSectionData
+    var contentSectionData:ContentSectionData
     var subSections:[ContentSection] = []
     var isActive:Bool
     var level:Int
